@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/pedro/OneDrive/Documentos/concrete_strength_prediction/mlruns/354082856585100737/9b1561393cb74b33b5b8e7ba5194e815/artifacts
+end_time: 1689541412647
+entry_point_name: ''
+experiment_id: '354082856585100737'
+lifecycle_stage: active
+run_id: 9b1561393cb74b33b5b8e7ba5194e815
+run_name: Gradient Boosting
+run_uuid: 9b1561393cb74b33b5b8e7ba5194e815
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689541405142
+status: 3
+tags: []
+user_id: pedro

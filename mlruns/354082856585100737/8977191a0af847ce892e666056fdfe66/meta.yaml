@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/pedro/OneDrive/Documentos/concrete_strength_prediction/mlruns/354082856585100737/8977191a0af847ce892e666056fdfe66/artifacts
+end_time: 1689541349013
+entry_point_name: ''
+experiment_id: '354082856585100737'
+lifecycle_stage: active
+run_id: 8977191a0af847ce892e666056fdfe66
+run_name: Random Forest
+run_uuid: 8977191a0af847ce892e666056fdfe66
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689541333401
+status: 3
+tags: []
+user_id: pedro

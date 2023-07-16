@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/pedro/OneDrive/Documentos/concrete_strength_prediction/mlruns/354082856585100737/9932d0ac56c242b58b2de46960bab005/artifacts
+end_time: 1689541442049
+entry_point_name: ''
+experiment_id: '354082856585100737'
+lifecycle_stage: active
+run_id: 9932d0ac56c242b58b2de46960bab005
+run_name: Bagging
+run_uuid: 9932d0ac56c242b58b2de46960bab005
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689541437123
+status: 3
+tags: []
+user_id: pedro

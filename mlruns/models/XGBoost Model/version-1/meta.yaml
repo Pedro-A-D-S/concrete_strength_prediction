@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1689542572343
+current_stage: None
+description: null
+last_updated_timestamp: 1689542572343
+name: XGBoost Model
+run_id: 2f650498d25a482cb9f66c9f9bee6b96
+run_link: null
+source: file:///c:/Users/pedro/OneDrive/Documentos/concrete_strength_prediction/mlruns/354082856585100737/2f650498d25a482cb9f66c9f9bee6b96/artifacts/model
+status: READY
+status_message: null
+user_id: null
+version: 1
