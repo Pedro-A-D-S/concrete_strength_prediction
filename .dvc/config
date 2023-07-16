@@ -1,4 +1,0 @@
-[core]
-    remote = myremote
-['remote "myremote"']
-    url = https://github.com/Pedro-A-D-S/concrete_strength_prediction.git
