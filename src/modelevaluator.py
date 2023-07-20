@@ -1,18 +1,24 @@
-import logging
-from dataclasses import dataclass
-import mlflow
+from logging import info
+from mlflow import log_metric
+import numpy as np
 import pandas as pd
-from sklearn import metrics
+from sklearn.metrics import mean_squared_error
+from mlflow import log_metric, set_tag, log_param, start_run, active_run, end_run
+from mlflow.sklearn import log_model
+from sklearn.metrics import r2_score
 from sklearn.base import BaseEstimator
+from sklearn.model_selection import KFold, cross_val_score
 
 
-@dataclass
 class ModelEvaluator:
     '''
     Utility class for training and evaluating scikit-learn models.
     '''
+    def __init__(self):
+        pass
 
-    def train(self, model: BaseEstimator, X_train: pd.DataFrame, y_train: pd.DataFrame) -> None:
+    def train(self, model: BaseEstimator, X_train: pd.DataFrame,
+              y_train: pd.DataFrame) -> None:
         '''
         Fits a scikit-learn model.
 
@@ -27,14 +33,15 @@ class ModelEvaluator:
         try:
             model = model.fit(X_train, y_train)
             train_accuracy = model.score(X_train, y_train)
-            mlflow.log_metric('train-accuracy', train_accuracy)
-            logging.info(f'Train Accuracy: {train_accuracy:.3%}')
+            log_metric('train-accuracy', train_accuracy)
+            info(f'Train Accuracy: {train_accuracy:.2%}')
         except Exception as e:
             raise e
 
         return None
 
-    def evaluate(self, model: BaseEstimator, X_test: pd.DataFrame, y_test: pd.DataFrame) -> None:
+    def evaluate(self, model: BaseEstimator, X_test: pd.DataFrame,
+                 y_test: pd.DataFrame) -> None:
         '''
         Evaluates a scikit-learn model.
 
@@ -51,21 +58,21 @@ class ModelEvaluator:
             y_pred = model.predict(X_test)
 
             # Model performance metrics
-            r2_score = metrics.r2_score(y_test, y_pred)
-            mse_score = metrics.mean_squared_error(y_test, y_pred)
+            r2_score = r2_score(y_test, y_pred)
+            mse_score = mean_squared_error(y_test, y_pred)
 
             # Log metrics
-            mlflow.log_metric('r2-score', r2_score)
-            mlflow.log_metric('mse', mse_score)
+            log_metric('r2-score', r2_score)
+            log_metric('mse', mse_score)
 
             # Print and log metrics
-            logging.info('R2 Score: {:.3f}'.format(r2_score))
-            logging.info('-' * 30)
-            logging.info('MSE: {:.3f}'.format(mse_score))
+            info('R2 Score: {:.2f}'.format(r2_score))
+            info('MSE: {:.2f}'.format(mse_score))
 
-            logging.info('-' * 30)
-            logging.info('Metrics and artifacts logged!')
+            info('Metrics and artifacts logged!')
         except Exception as e:
             raise e
 
         return None
+            
+            
