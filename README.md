@@ -52,6 +52,11 @@ pip install src/requirements.txt
 ```
 3. Execute the notebooks in the specified order, ensuring that the dataset and necessary files are correctly referenced.
 
+
+## Dask as the Runtime Engine
+
+In the data processing step, we have incorporated **Dask**, a parallel computing library, to handle large-scale data efficiently. With Dask, we can process data in a distributed manner, allowing us to scale our computation to multiple cores and machines seamlessly. The use of Dask enables us to leverage the power of parallel processing, making our data processing pipelines faster and more scalable.
+
 Feel free to experiment with different regression algorithms and hyperparameter tuning to further enhance the model performance. Share your feedback and contribute to this project to help us improve and expand its capabilities.
 
 ## MLflow Integration
