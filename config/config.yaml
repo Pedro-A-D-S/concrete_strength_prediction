@@ -1,0 +1,5 @@
+# 1. Data paths for 01_EDA_strength_prediction.ipynb
+
+raw_data_path: ../../data/0-raw-data/Concrete_Data.csv
+save_bronze_data: ../../data/1-bronze/correct_dtypes.csv
+save_bronze_data_parquet: ../../data/2-silver/Concrete_Data_Cleaned.parquet
